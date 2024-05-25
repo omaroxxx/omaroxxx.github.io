@@ -10,17 +10,19 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
         }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
+            padding: 20px 0;
         }
         header {
             background: #333;
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
+            padding: 20px 0;
             border-bottom: #77aaff 3px solid;
         }
         header a {
@@ -35,7 +37,7 @@
         }
         header li {
             display: inline;
-            padding: 0 20px 0 20px;
+            padding: 0 20px;
         }
         header #branding {
             float: left;
@@ -48,34 +50,65 @@
             margin-top: 10px;
         }
         section#showcase {
-            min-height: 400px;
-            background: url('your-image.jpg') no-repeat 0 -400px;
+            min-height: 300px;
+            background: #77aaff;
             text-align: center;
             color: #fff;
+            padding: 50px 0;
         }
         section#showcase h1 {
-            margin-top: 100px;
             font-size: 55px;
             margin-bottom: 10px;
         }
         section#showcase p {
             font-size: 20px;
         }
+        section.main-section {
+            padding: 20px 0;
+        }
+        section.main-section h2 {
+            margin-bottom: 10px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        section.main-section p,
+        section.main-section ul {
+            margin: 0 0 10px;
+        }
+        section.main-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        section.main-section ul li {
+            background: #e4e4e4;
+            margin: 5px 0;
+            padding: 10px;
+            border-left: #333 3px solid;
+        }
         footer {
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 30px;
-            margin-top: 30px;
+            padding: 20px;
+            margin-top: 20px;
         }
-        .main-section {
-            padding: 20px 0;
-        }
-        .main-section h2 {
+        .project {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #e4e4e4;
+            padding: 10px;
             margin-bottom: 10px;
+            border-left: #333 3px solid;
         }
-        .main-section p, .main-section ul {
-            margin: 0 0 10px;
+        .project img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .project-details {
+            flex-grow: 1;
+            margin-left: 20px;
         }
     </style>
 </head>
@@ -92,7 +125,6 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -130,27 +162,28 @@
 
         <section id="portfolio" class="main-section">
             <h2>Portfolio</h2>
-            <p>Here are some of the projects I have worked on:</p>
-            <ul>
-                <li><a href="https://github.com/omaroxxx/project1">Project 1</a> - Description of Project 1</li>
-                <li><a href="https://github.com/omaroxxx/project2">Project 2</a> - Description of Project 2</li>
-            </ul>
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1">
+                <div class="project-details">
+                    <h3><a href="https://github.com/omaroxxx/project1">Project 1: Personal Portfolio Website</a></h3>
+                    <p>This project showcases my ability to create a responsive and modern personal portfolio website using HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <div class="project-details">
+                    <h3><a href="https://github.com/omaroxxx/project2">Project 2: Todo List Application</a></h3>
+                    <p>A simple and efficient todo list application built with Python and Flask, demonstrating my skills in backend development and user authentication.</p>
+                </div>
+            </div>
         </section>
 
         <section id="experience" class="main-section">
             <h2>Experience</h2>
-            <p>Internships and volunteer work:</p>
             <ul>
-                <li>Intern at Company XYZ - Developed web applications using React and Node.js</li>
-                <li>Volunteer at Non-Profit ABC - Assisted in data management and analysis</li>
-            </ul>
-        </section>
-
-        <section id="achievements" class="main-section">
-            <h2>Achievements</h2>
-            <ul>
-                <li>Winner of XYZ Coding Competition</li>
-                <li>Recipient of ABC Scholarship</li>
+                <li>Developed web applications using modern frameworks and libraries.</li>
+                <li>Assisted in data management and analysis for research projects.</li>
+                <li>Collaborated with a team to design and implement software solutions for various academic projects.</li>
             </ul>
         </section>
 
